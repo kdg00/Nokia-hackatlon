@@ -1,7 +1,5 @@
 with open('./input.txt', 'r') as f:
-  input = f.read()
-
-print(input)
+  input = f.read().split("\n")
 
 #fibonacci számolás
 import functools
@@ -13,14 +11,19 @@ def fib(n):
     return fib(n-1) + fib(n-2)
 
 
-fibs = []
-n = 0
+
 for item in input:
-  #int e az adatunk?
-  if type(item) != int:
+  fibs = []
+  n = 0
+  #int e az adatunk?  
+  try:
+    item = int(item)
+  except ValueError:
     print("N/A")
     continue
-  while input < fib(n + 1):
-    fibs = fib(n)
-    n += 1
-print("asd")
+  while item > fib(n + 1):
+     fibs.append(fib(n))
+     n += 1
+  fibs = [item for item in fibs if item % 3 == 0]
+  if len(fibs) != 0:
+    print(*fibs, sep=", ") 
