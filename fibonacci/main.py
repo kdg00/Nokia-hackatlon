@@ -1,9 +1,11 @@
-with open('./input.txt', 'r') as f:
+with open('./input', 'r') as f:
   input = f.read()
 
 print(input)
 
 #fibonacci számolás
+import functools
+
 @functools.lru_cache(None)
 def fib(n):
     if n < 2:
@@ -18,7 +20,7 @@ for item in input:
   if type(item) != int:
     print("N/A")
     continue
-  while input < fib(n + 1)
+  while input < fib(n + 1):
     fibs = fib(n)
     n += 1
 print("asd")
