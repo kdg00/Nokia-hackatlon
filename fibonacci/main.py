@@ -41,5 +41,5 @@ for item in input:
     # A lista kiválogatása
     fibs = [item for item in fibs if item % 3 == 0]
     # A lista konzolra kiírása, abban az esetben ha ez szükséges.
-    if len(fibs) != 0:
+    if len(fibs) > 1:
         print(*fibs, sep=", ")
