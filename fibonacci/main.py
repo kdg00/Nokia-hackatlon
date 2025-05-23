@@ -3,7 +3,22 @@ with open('./input.txt', 'r') as f:
 
 print(input)
 
+#fibonacci számolás
+@functools.lru_cache(None)
+def fib(n):
+    if n < 2:
+        return n
+    return fib(n-1) + fib(n-2)
+
+
+fibs = []
+n = 0
 for item in input:
+  #int e az adatunk?
   if type(item) != int:
     print("N/A")
     continue
+  while input < fib(n + 1)
+    fibs = fib(n)
+    n += 1
+print("asd")
