@@ -19,7 +19,10 @@ for item in input:
   try:
     item = int(item)
   except ValueError:
-    continue
+    try:
+      item = float(item)
+    except ValueError:
+      continue
   while item > fib(n + 1):
      fibs.append(fib(n))
      n += 1
