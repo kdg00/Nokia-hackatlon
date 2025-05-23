@@ -19,7 +19,6 @@ for item in input:
   try:
     item = int(item)
   except ValueError:
-    print("N/A")
     continue
   while item > fib(n + 1):
      fibs.append(fib(n))
