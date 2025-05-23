@@ -9,7 +9,7 @@ def fib(n):
     """
     Python dokumentációban talált mód fibonacci számok generálására: 
     https://docs.python.org/3/library/functools.html#functools.lru_cache
-    
+
     Args:
         n (int): A szám aminek a fibonacci értékére kíváncsiak vagyunk.
 
@@ -32,9 +32,10 @@ for item in input:
         try:
             item = float(item)
         except ValueError:
+            print("N/A")
             continue
     # A vizsgálandó lista elkészítése.
-    while item > fib(n + 1):
+    while item >= fib(n + 1):
         fibs.append(fib(n))
         n += 1
     # A lista kiválogatása
