@@ -29,3 +29,5 @@ for item in input:
   fibs = [item for item in fibs if item % 3 == 0]
   if len(fibs) != 0:
     print(*fibs, sep=", ") 
+
+pass
