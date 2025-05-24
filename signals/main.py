@@ -19,11 +19,22 @@ for item in eventlist:
 
 
 common = []
-for item in allevents.keys():
-  if not common:
-    common = item
-    continue
+def_good = {}
+not_so_good = {}
+for event in allevents.keys():
+  common = []
+  for i in allevents[event]:
+    if not common:
+      common = signallist[i]
+      continue
+    common = list(set(common) & set(signallist[i]))
+  if len(common) == 1:
+    def_good[event] = common
+  else:
+    not_so_good[event] = common
 
-
-
+for good in def_good.keys():
+  for lists in not_so_good.keys():
+    if good in lists:
+      not_so_good[lists] = lists.pop(lists.index(def_good))
 print("asd")

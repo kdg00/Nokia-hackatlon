@@ -29,10 +29,7 @@ for item in input:
     try:
         item = int(item)
     except ValueError:
-        try:
-            item = float(item)
-        except ValueError:
-            continue
+        continue
         
     # A vizsgálandó lista elkészítése.
     while item >= fib(n + 1):
@@ -44,5 +41,5 @@ for item in input:
 
     # A lista konzolra kiírása, abban az esetben ha ez szükséges.
     if len(fibs) > 0:
-        print(*fibs, sep=", ")
+        print(item, *fibs, sep=", ")
         
