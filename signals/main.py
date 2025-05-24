@@ -1,14 +1,29 @@
+import ast 
+
 with open('./input.txt', 'r') as f:
   input = f.read()
-  eval(input)
+  input = ast.literal_eval(input.strip())
 
-print(input[0])
+eventlist = [item[1] for item in input]
+signallist = [item[0] for item in input]
+allevents = {}
 
-#allevents = [item[1] for item in input]
+for item in eventlist:
+  for event in item:
+    if event not in allevents.keys():
+      one_event = []
+      for i in range(len(eventlist)):
+        if event in eventlist[i]:
+          one_event.append(i)
+      allevents[event] = one_event 
 
-'''
-for item in input:
-  codes = item[0]
-  events = item[1]
-'''
+
+common = []
+for item in allevents.keys():
+  if not common:
+    common = item
+    continue
+
+
+
 print("asd")
