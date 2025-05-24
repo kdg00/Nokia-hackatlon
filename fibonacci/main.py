@@ -45,5 +45,4 @@ for item in input:
     # A lista konzolra kiírása, abban az esetben ha ez szükséges.
     if len(fibs) > 0:
         print(*fibs, sep=", ")
-    else:
         
