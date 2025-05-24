@@ -32,7 +32,6 @@ for item in input:
         try:
             item = float(item)
         except ValueError:
-            print("N/A")
             continue
         
     # A vizsgálandó lista elkészítése.
@@ -47,4 +46,4 @@ for item in input:
     if len(fibs) > 0:
         print(*fibs, sep=", ")
     else:
-        print("N/A")
+        
