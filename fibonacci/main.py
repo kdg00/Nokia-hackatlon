@@ -34,12 +34,17 @@ for item in input:
         except ValueError:
             print("N/A")
             continue
+        
     # A vizsgálandó lista elkészítése.
     while item >= fib(n + 1):
         fibs.append(fib(n))
         n += 1
+
     # A lista kiválogatása
     fibs = [item for item in fibs if item % 3 == 0]
+
     # A lista konzolra kiírása, abban az esetben ha ez szükséges.
-    if len(fibs) > 1:
+    if len(fibs) > 0:
         print(*fibs, sep=", ")
+    else:
+        print("N/A")
