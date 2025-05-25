@@ -49,9 +49,10 @@ for i in range(len(not_so_good)):
       if event in item and item != val:
         n.append(key)
       
-print(def_good)
-    #if all(event in item for item in not_so_good.values() if item != val):
 
+    #if all(event in item for item in not_so_good.values() if item != val):
+for key, value in def_good.items():
+    print(f"{value[0]}: {key}")
 
 #Átmegyünk a not_so_good.values-on és keressük, hogy melyik elemben van bent az összes item a jelenleg
 # vizsgált not_so_good.values elemben
