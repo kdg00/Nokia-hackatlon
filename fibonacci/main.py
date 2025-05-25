@@ -29,8 +29,8 @@ for item in input:
     try:
         item = int(item)
     except ValueError:
+        print("N/A")
         continue
-        
     # A vizsgálandó lista elkészítése.
     while item >= fib(n):
         fibs.append(fib(n))
@@ -41,5 +41,6 @@ for item in input:
 
     # A lista konzolra kiírása, abban az esetben ha ez szükséges.
     if len(fibs) > 0:
-        print(item, *fibs, sep=", ")
-        
+        print(*fibs, sep=", ")
+    else:
+        print("N/A")   
