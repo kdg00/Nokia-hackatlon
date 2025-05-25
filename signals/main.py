@@ -33,8 +33,25 @@ for event in allevents.keys():
   else:
     not_so_good[event] = common
 
-for good in def_good.keys():
-  for lists in not_so_good.keys():
-    if good in lists:
-      not_so_good[lists] = lists.pop(lists.index(def_good))
-print("asd")
+for good in def_good.values():
+  for i in range(len(not_so_good)):
+    val = list(not_so_good.values())[i]
+    if good[0] in list(not_so_good.values())[i]:
+      val.pop(val.index(good[0]))
+      key = list(not_so_good.keys())[i] 
+      not_so_good[key] = val
+for i in range(len(not_so_good)):
+  val = list(not_so_good.values())[i]
+  key = list(not_so_good.keys())[i]
+  n = [] 
+  for event in val:
+    for item in not_so_good.values():
+      if event in item and item != val:
+        n.append(key)
+      
+print(def_good)
+    #if all(event in item for item in not_so_good.values() if item != val):
+
+
+#Átmegyünk a not_so_good.values-on és keressük, hogy melyik elemben van bent az összes item a jelenleg
+# vizsgált not_so_good.values elemben
