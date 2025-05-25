@@ -32,7 +32,7 @@ for item in input:
         continue
         
     # A vizsgálandó lista elkészítése.
-    while item >= fib(n + 1):
+    while item >= fib(n):
         fibs.append(fib(n))
         n += 1
 
