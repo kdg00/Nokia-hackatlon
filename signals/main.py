@@ -54,5 +54,6 @@ for i in range(len(not_so_good)):
 for key, value in def_good.items():
     print(f"{value[0]}: {key}")
 
+print()
 #Átmegyünk a not_so_good.values-on és keressük, hogy melyik elemben van bent az összes item a jelenleg
 # vizsgált not_so_good.values elemben
